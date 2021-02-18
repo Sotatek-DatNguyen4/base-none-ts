@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 
 const withReactHookForm = (config) => (Component) => {
   return (props) => {
-    const formConfig = config || {mode: 'onChange'};
+    const formConfig = config || { mode: 'onChange' };
     const { handleSubmit, ...res } = useForm(formConfig);
 
     return (
