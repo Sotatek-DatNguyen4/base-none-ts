@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, withRouter, RouteComponentProps } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearAlert } from '../store/actions/alert';
-import Error from '../pages/error';
-import NotFound from '../pages/not-found';
+import Error from '../pages/error/index';
+import NotFound from '../pages/not-found/index';
 import ErrorBoundary from '../components/common/error-boundary/index';
-import Home from '../pages/home';
-import Login from '../pages/login';
-import Form from '../pages/form';
+import Home from '../pages/home/index';
+import Login from '../pages/login/index';
+import Form from '../pages/form/index';
 
 //@ts-ignore
 import { NotificationContainer, NotificationManager } from 'react-notifications';

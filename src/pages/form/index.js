@@ -1,13 +1,13 @@
 import React from 'react';
-import DefaultLayout from '../../components/layout/default-layout/index';
+import DefaultLayout from '../../components/layout/default-layout';
 import withReactHookForm from '../../hocs/withReactHookForm';
-import InputText from '../../components/common/input-text/index';
+import InputText from '../../components/common/input-text';
 import { renderFieldError } from '../../utils/formFields';
-import InputNumber from '../../components/common/input-number/index';
+import InputNumber from '../../components/common/input-number';
 
-const Form = (props: any) => {
+const Form = (props) => {
   const {errors, register, handleSubmit} = props;
-  const onSubmit = (data: any) => {
+  const onSubmit = (data) => {
     console.log(111, data);
   };
 
