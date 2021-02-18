@@ -26,15 +26,17 @@ export const getContractInstance = (ABIContract, contractAddress) => {
       ABIContract,
       contractAddress,
     );
-  } else if (window.web3) {
+  }
+
+  if (window.web3) {
     const web3Instance = new Web3(window.web3.currentProvider);
     return new web3Instance.eth.Contract(
       ABIContract,
       contractAddress,
     );
-  } else {
-    return null;
   }
+
+  return null;
 };
 
 export const convertFromWei = (value, unit = 'ether') => {
