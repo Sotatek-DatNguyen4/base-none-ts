@@ -1,8 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-const withReactHookForm = (config: any) => (Component: any) => {
-  return (props: any) => {
+const withReactHookForm = (config) => (Component) => {
+  return (props) => {
     const formConfig = config || {mode: 'onChange'};
     const { handleSubmit, ...res } = useForm(formConfig);
 
