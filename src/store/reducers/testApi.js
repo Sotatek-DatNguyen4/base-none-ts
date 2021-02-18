@@ -1,11 +1,4 @@
 import { testApiActions } from '../constants/testApi';
-import { AnyAction } from 'redux';
-
-type StateType = {
-  data: string;
-  loading: boolean;
-  error: string;
-};
 
 const initialState = {
   data: '',
@@ -13,7 +6,7 @@ const initialState = {
   error: ''
 };
 
-const testApiReducer = (state: StateType = initialState, action: AnyAction) => {
+const testApiReducer = (state = initialState, action) => {
   switch (action.type) {
 
     case testApiActions.TEST_API_LOADING: {
@@ -21,7 +14,7 @@ const testApiReducer = (state: StateType = initialState, action: AnyAction) => {
         ...state,
         loading: true
       }
-    } 
+    }
 
     case testApiActions.TEST_API_SUCCESS: {
       return {

@@ -2,7 +2,6 @@ import { combineReducers } from 'redux';
 import { alertReducer } from './alert'
 import userReducer from './user';
 import testApiReducer from './testApi';
-
 import { userActions } from '../constants/user';
 
 const appReducer = combineReducers({
@@ -11,12 +10,11 @@ const appReducer = combineReducers({
   testApi: testApiReducer,
 });
 
-export type RootState = ReturnType<typeof appReducer>;
-
-const rootReducer = (state: any, action: any) => {
+const rootReducer = (state, action) => {
   if (action.type === userActions.USER_LOGOUT) {
     state = undefined;
   }
+
   return appReducer(state, action);
 };
 

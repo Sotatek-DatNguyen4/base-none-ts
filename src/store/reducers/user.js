@@ -1,11 +1,4 @@
 import { userActions } from '../constants/user';
-import { AnyAction } from 'redux';
-
-type StateType = {
-  data: string;
-  loading: boolean;
-  error: string;
-};
 
 const initialState = {
   data: '',
@@ -13,7 +6,7 @@ const initialState = {
   error: ''
 };
 
-const userReducer = (state: StateType = initialState, action: AnyAction) => {
+const userReducer = (state = initialState, action) => {
   switch (action.type) {
 
     case userActions.USER_LOGIN_LOADING: {
