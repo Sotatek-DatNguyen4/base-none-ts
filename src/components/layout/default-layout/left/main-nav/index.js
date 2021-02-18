@@ -15,7 +15,7 @@ const routers = [
   },
 ];
 
-const MainNav = (props: any) => {
+const MainNav = (props) => {
   const { location } = props;
 
   return (

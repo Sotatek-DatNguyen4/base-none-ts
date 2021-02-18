@@ -1,9 +1,9 @@
 import React from 'react';
-import DefaultLayout from '../../components/layout/default-layout';
+import DefaultLayout from '../../components/layout/default-layout/index';
 import withReactHookForm from '../../hocs/withReactHookForm';
-import InputText from '../../components/common/input-text';
+import InputText from '../../components/common/input-text/index';
 import { renderFieldError } from '../../utils/formFields';
-import InputNumber from '../../components/common/input-number';
+import InputNumber from '../../components/common/input-number/index';
 
 const Form = (props: any) => {
   const {errors, register, handleSubmit} = props;

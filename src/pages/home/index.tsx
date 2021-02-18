@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import DefaultLayout from '../../components/layout/default-layout';
+import DefaultLayout from '../../components/layout/default-layout/index';
 import { testApi } from '../../store/actions/testApi';
 import './style.scss';
 

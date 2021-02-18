@@ -2,7 +2,7 @@ import React from 'react';
 import CircularProgress from '@material-ui/core/CircularProgress/CircularProgress';
 import './style.scss';
 
-const Button = (props: any) => {
+const Button = (props) => {
   const {
     className = '',
     buttonType = '',

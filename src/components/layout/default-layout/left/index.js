@@ -1,9 +1,9 @@
 import React from 'react';
-import HeaderUser from './header-user';
-import MainNav from './main-nav';
-import Copyright from './copyright';
+import HeaderUser from './header-user/index';
+import MainNav from './main-nav/index';
+import Copyright from './copyright/index';
 
-const Left = (props: any) => {
+const Left = () => {
   return (
     <div className="default-layout__left">
       <HeaderUser />

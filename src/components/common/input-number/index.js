@@ -18,7 +18,7 @@ const INTEGER_NUMBER_KEY_CODE_LIST = [ARROW_LEFT_KEY_CODE, ARROW_RIGHT_KEY_CODE,
 const FLOAT_NUMBER_KEY_CODE_LIST = [...INTEGER_NUMBER_KEY_CODE_LIST, DECIMAL_KEY_CODE];
 const COPY_KEY_CODE_LIST = [A_KEY_CODE, V_KEY_CODE, C_KEY_CODE];
 
-const InputNumber = (props: any) => {
+const InputNumber = (props) => {
   const {
     label = '',
     register = '',
@@ -32,7 +32,7 @@ const InputNumber = (props: any) => {
     ...rest
   } = props;
 
-  const isNumberByASCIIC = (event: any) => {
+  const isNumberByASCIIC = (event) => {
     const keyCode = event.keyCode || event.which;
     const keyCodeList = type === 'integer' ? INTEGER_NUMBER_KEY_CODE_LIST : FLOAT_NUMBER_KEY_CODE_LIST;
     if (keyCodeList.includes(keyCode)) {
@@ -51,21 +51,21 @@ const InputNumber = (props: any) => {
     return !(keyCode < START_NUMBER_KEY_CODE || keyCode > END_NUMBER_KEY_CODE);
   };
 
-  const onKeyDown = (event: any) => {
+  const onKeyDown = (event) => {
     if (!isNumberByASCIIC(event)) {
       event.preventDefault();
     }
     return true;
   };
 
-  const onValueChange = (event: any) => {
+  const onValueChange = (event) => {
     const value = event.target.value;
     if (typeof onChange === 'function') {
       onChange(value);
     }
   };
 
-  const onBlurChange = (event: any) => {
+  const onBlurChange = (event) => {
     const value = event.target.value;
     if (typeof onBlur === 'function') {
       onBlur(value);

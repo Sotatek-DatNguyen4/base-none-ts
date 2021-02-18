@@ -1,9 +1,9 @@
 import React from 'react';
-import Left from './left';
-import Right from './right';
+import Left from './left/index';
+import Right from './right/index';
 import './style.scss';
 
-const DefaultLayout = (props: any) => {
+const DefaultLayout = (props) => {
   return (
     <div className="default-layout">
       <Left />

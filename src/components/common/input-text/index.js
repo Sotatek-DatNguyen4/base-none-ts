@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-const InputText = (props: any) => {
+const InputText = (props) => {
   const {
     label = '',
     register = '',
@@ -14,14 +14,14 @@ const InputText = (props: any) => {
     ...rest
   } = props;
 
-  const onValueChange = (event: any) => {
+  const onValueChange = (event) => {
     const value = event.target.value;
     if (typeof onChange === 'function') {
       onChange(value);
     }
   };
 
-  const onBlurChange = (event: any) => {
+  const onBlurChange = (event) => {
     const value = event.target.value;
     if (typeof onBlur === 'function') {
       onBlur(value);

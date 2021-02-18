@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Right: React.FC<any> = (props: any) => {
+const Right = (props) => {
   return (
     <div className="default-layout__right">
       {props.children}

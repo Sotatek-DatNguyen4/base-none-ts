@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
-interface State {
-  hasError?: boolean;
-}
-
-class ErrorBoundary extends Component<any, State> {
-  constructor(props: any) {
+class ErrorBoundary extends Component {
+  constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+    };
   }
 
-  componentDidCatch(error: any, errorInfo: React.ErrorInfo) {
+  componentDidCatch(error, errorInfo) {
     console.log('error-boundary - Error Info: ' + errorInfo.componentStack);
     const { history } = this.props;
-    this.setState({ hasError: true });
-    history.push({ pathname: '/error', state: { hasError: true } });
+    this.setState({
+      hasError: true,
+    });
+    history.push({
+      pathname: '/error',
+      state: { hasError: true }
+    });
   }
 
   render() {
