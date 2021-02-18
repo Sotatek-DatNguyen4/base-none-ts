@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 class Request {
-  instance: any;
+  instance;
   constructor() {
     const instance = axios.create({
       //baseURL: process.env.REACT_APP_API_BASE_URL,
@@ -14,19 +14,19 @@ class Request {
     this.instance = instance;
   };
 
-  get = (url: string) => {
+  get = (url) => {
     return this.instance.get(url);
   };
 
-  post = (url: string, data: object) => {
+  post = (url, data) => {
     return this.instance.post(url, data);
   };
 
-  put = (url: string, data: object) => {
+  put = (url, data) => {
     return this.instance.put(url, data);
   };
 
-  delete = (url: string) => {
+  delete = (url) => {
     return this.instance.delete(url);
   };
 }

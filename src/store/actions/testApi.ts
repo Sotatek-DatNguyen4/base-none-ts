@@ -1,7 +1,7 @@
 import { testApiActions } from '../constants/testApi';
 import { AnyAction } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
-import Request from '../../request';
+import Request from '../../request/index';
 
 export const testApi = () => {
   return async (dispatch: ThunkDispatch<{}, {}, AnyAction>) => {
