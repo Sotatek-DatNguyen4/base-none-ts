@@ -1,5 +1,5 @@
 import _ from 'lodash';
 
-export const renderFieldError = (errors: any, fieldName: string) => {
+export const renderFieldError = (errors, fieldName) => {
   return _.get(errors, `[${fieldName}.message]`, '');
 };

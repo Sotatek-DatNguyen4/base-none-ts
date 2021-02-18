@@ -1,10 +1,10 @@
 import moment from 'moment';
 
-export const convertUnixTimeToDateTime = (time: number) => {
+export const convertUnixTimeToDateTime = (time) => {
   return moment.unix(time).format("hh:mm:ss A MM/DD/yyyy");
 };
 
-export const convertDateTimeToUnix = (time: any): string => {
+export const convertDateTimeToUnix = (time) => {
   if (!time) {
     return '';
   }
