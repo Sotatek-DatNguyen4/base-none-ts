@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch, withRouter, RouteComponentProps } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearAlert } from '../store/actions/alert';
 import Error from '../pages/error/index';
@@ -8,16 +8,14 @@ import ErrorBoundary from '../components/common/error-boundary/index';
 import Home from '../pages/home/index';
 import Login from '../pages/login/index';
 import Form from '../pages/form/index';
-
-//@ts-ignore
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 import AppContainer from '../AppContainer';
 
-const Routes: React.FC<RouteComponentProps> = (props: RouteComponentProps) => {
+const Routes = (props) => {
   const dispatch = useDispatch();
 
-  const alert = useSelector((state: any) => state.alert);
+  const alert = useSelector((state) => state.alert);
   const { history } = props;
 
   useEffect(() => {
@@ -32,7 +30,6 @@ const Routes: React.FC<RouteComponentProps> = (props: RouteComponentProps) => {
       dispatch(clearAlert());
     });
   }, []);
-
 
   return (
     <div>
